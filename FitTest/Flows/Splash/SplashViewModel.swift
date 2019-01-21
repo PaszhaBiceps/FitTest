@@ -13,10 +13,13 @@ class SplashViewModel {
     
     init() {}
     
+    // MARK: - Variables
+    private let splashDelay: Double = 2.0
+    
     // MARK: - Functions
-    func proceedToHome(compeltion: @escaping (_ homeViewController: UIViewController) -> Void) {
-        DispatchQueue.delayOnMainQueue(2) {
-            compeltion(ViewControllers.home.initWithNib())
+    func proceedToHome(completion: @escaping (_ homeViewController: UIViewController) -> Void) {
+        DispatchQueue.delayOnMainQueue(self.splashDelay) {
+            completion(ViewControllers.home.initWithNib())
         }
     }
 }

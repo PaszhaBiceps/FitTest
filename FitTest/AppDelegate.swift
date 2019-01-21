@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     // MARK: - App lifecycle
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.configureWindow()
         self.setRootViewController()
         return true
     }
@@ -43,6 +44,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     // MARK: - Functions
+    private func configureWindow() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.backgroundColor = UIColor.white
+        self.window?.makeKeyAndVisible()
+    }
+    
     private func setRootViewController() {
         let splashViewController = ViewControllers.splash.initWithNib()
         let navigationController = UINavigationController(rootViewController: splashViewController)

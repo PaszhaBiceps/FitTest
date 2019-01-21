@@ -23,6 +23,7 @@ class HomeViewModel {
     private let refreshControl = UIRefreshControl()
     private let homeTableCellHeight: CGFloat = 70.0
     private let refreshControlTitle = "Updating..."
+    private let dataDelay: Double = 2.0
     
     // MARK: - Blocks
     var dataStartedUpdatingBlock: (() -> ())?
@@ -37,7 +38,7 @@ class HomeViewModel {
     
     func refreshData() {
         self.dataStartedUpdatingBlock?()
-        DispatchQueue.delayOnMainQueue(2) {[weak self] () in
+        DispatchQueue.delayOnMainQueue(self.dataDelay) {[weak self] () in
             guard let self = self else { return }
             self.modelsFromFile()
         }
@@ -59,7 +60,7 @@ class HomeViewModel {
     
     // MARK: - Selectors
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
-        DispatchQueue.delayOnMainQueue(2) {[weak self] () in
+        DispatchQueue.delayOnMainQueue(self.dataDelay) {[weak self] () in
             guard let self = self else { return }
             self.modelsFromFile()
         }
