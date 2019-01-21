@@ -37,7 +37,7 @@ class HomeViewModel {
     
     func refreshData() {
         self.dataStartedUpdatingBlock?()
-        delayOnMainQueue(2) {[weak self] () in
+        DispatchQueue.delayOnMainQueue(2) {[weak self] () in
             guard let self = self else { return }
             self.modelsFromFile()
         }
@@ -59,7 +59,7 @@ class HomeViewModel {
     
     // MARK: - Selectors
     @objc func refreshData(_ refreshControl: UIRefreshControl) {
-        delayOnMainQueue(2) {[weak self] () in
+        DispatchQueue.delayOnMainQueue(2) {[weak self] () in
             guard let self = self else { return }
             self.modelsFromFile()
         }

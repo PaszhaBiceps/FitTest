@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		186C7A0D21F5B9380043F679 /* Collection+FitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C7A0C21F5B9380043F679 /* Collection+FitTest.swift */; };
+		186C7A0F21F5BAD20043F679 /* DispatchQueue+FitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 186C7A0E21F5BAD20043F679 /* DispatchQueue+FitTest.swift */; };
 		18AFC26A21F35517001973E3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18AFC26821F35517001973E3 /* HomeTableViewCell.swift */; };
 		18AFC26B21F35517001973E3 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18AFC26921F35517001973E3 /* HomeTableViewCell.xib */; };
 		18FA927A21F2811600D221B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18FA927921F2811600D221B0 /* AppDelegate.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		186C7A0C21F5B9380043F679 /* Collection+FitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+FitTest.swift"; sourceTree = "<group>"; };
+		186C7A0E21F5BAD20043F679 /* DispatchQueue+FitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+FitTest.swift"; sourceTree = "<group>"; };
 		18AFC26821F35517001973E3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		18AFC26921F35517001973E3 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		18FA927621F2811600D221B0 /* FitTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +160,7 @@
 			children = (
 				18FA929921F2860600D221B0 /* UIViewController+FitTest.swift */,
 				186C7A0C21F5B9380043F679 /* Collection+FitTest.swift */,
+				186C7A0E21F5BAD20043F679 /* DispatchQueue+FitTest.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				18AFC26A21F35517001973E3 /* HomeTableViewCell.swift in Sources */,
 				18FA92A021F289B400D221B0 /* CsvParser.swift in Sources */,
 				18FA929721F2837400D221B0 /* Constants.swift in Sources */,
+				186C7A0F21F5BAD20043F679 /* DispatchQueue+FitTest.swift in Sources */,
 				18FA929D21F2886B00D221B0 /* HomeViewController.swift in Sources */,
 				18FA92A621F292C700D221B0 /* EntityModel.swift in Sources */,
 				18FA92A221F291D200D221B0 /* SplashViewModel.swift in Sources */,

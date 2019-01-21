@@ -15,7 +15,7 @@ class SplashViewModel {
     
     // MARK: - Functions
     func proceedToHome(compeltion: @escaping (_ homeViewController: UIViewController) -> Void) {
-        delayOnMainQueue(2) {
+        DispatchQueue.delayOnMainQueue(2) {
             compeltion(ViewControllers.home.initWithNib())
         }
     }
