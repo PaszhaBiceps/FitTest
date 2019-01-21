@@ -35,10 +35,12 @@ class HomeTableViewCell: UITableViewCell {
     
     // MARK: - Functions
     func configure(with entity: EntityModel) {
-        self.avatarImageView.image = nil
+        
         // TODO: Consider adding placeholder image here
         if let image = entity.image {
             self.avatarImageView.image = image
+        } else {
+            self.avatarImageView.image = nil
         }
         
         self.entityTitleLabel.text = entity.title?.capitalized ?? ""
