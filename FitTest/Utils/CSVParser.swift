@@ -1,5 +1,5 @@
 //
-//  CsvParser.swift
+//  CSVParser.swift
 //  FitTest
 //
 //  Created by Pavel Borisov on 1/19/19.
@@ -8,14 +8,10 @@
 
 import Foundation
 
-class CsvParser {
-    static let shared = CsvParser()
+class CSVParser {
+    static let shared = CSVParser()
     
     init() {}
-    
-    // MARK: - Variables
-    private let fileName = "test_data"
-    private let fileType = "csv"
     
     // MARK: - Functions
     func csvContents() -> [[String]] {
@@ -26,7 +22,7 @@ class CsvParser {
     // MARK: - Private
     private func readContentsFromFile() -> String? {
         // Retreive contents from a csv file at given path
-        guard let path = Bundle.main.path(forResource: self.fileName, ofType: self.fileType) else {
+        guard let path = Bundle.main.path(forResource: CSVParserConstants.testFileName, ofType: CSVParserConstants.fileExtension) else {
             print("No path for test csv file!")
             return nil
         }
@@ -41,6 +37,7 @@ class CsvParser {
     }
     
     private func formattedContents(from csvString: String) -> [[String]] {
+        // Remove redundant "\n" symbol occurences before separating csv rows by "\r".
         var csvComponents = csvString.replacingOccurrences(of: "\n", with: "").components(separatedBy: "\r")
         guard csvComponents.count > 0 else {
             print("Empty csv componnets!")

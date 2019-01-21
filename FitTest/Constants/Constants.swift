@@ -18,3 +18,8 @@ struct CellIdentifiers {
         static let homeCell = "HomeTableViewCell"
     }
 }
+
+struct CSVParserConstants {
+    static let testFileName = "test_data"
+    static let fileExtension = "csv"
+}

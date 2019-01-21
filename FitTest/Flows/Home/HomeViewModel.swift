@@ -50,7 +50,7 @@ class HomeViewModel {
     
     // MARK: - Private
     private func modelsFromFile() {
-        let rawModels = CsvParser.shared.csvContents()
+        let rawModels = CSVParser.shared.csvContents()
         var entityModels: [EntityModel] = []
         for rawModel in rawModels {
             entityModels.append(EntityModel(with: rawModel))
