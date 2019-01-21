@@ -22,9 +22,12 @@ class EntityModel {
         self.init()
         
         if data.count > 0 {
-            self.title = data[0]
-            self.subtitle = data[1]
-            self.amount = Double(data[2])
+            self.title = data[safe: 0]
+            self.subtitle = data[safe: 1]
+            
+            if let nonFormattedAmount = data[safe: 2] {
+                self.amount = Double(nonFormattedAmount)
+            }
             
             if let title = self.title {
                 self.image = UIImage(named: title)
